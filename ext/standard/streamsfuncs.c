@@ -283,7 +283,6 @@ PHP_FUNCTION(stream_socket_accept)
 		}
 		php_stream_to_zval(clistream, return_value);
 	} else {
-		php_error_docref(NULL, E_WARNING, "accept failed: %s", errstr ? ZSTR_VAL(errstr) : "Unknown error");
 		RETVAL_FALSE;
 	}
 
